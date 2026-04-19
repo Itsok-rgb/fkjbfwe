@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Jaan — Our Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <p class="hero-kicker">A tiny universe, just for you</p>
+    <h1>Happy Anniversary, <span class="name-glow">Jaan</span></h1>
+    <p class="hero-sub">Not married yet — but already my favourite forever thing.</p>
+    <div class="hero-stats">
+      <div class="stat-card" id="daysTogether">
+        <span class="stat-num" data-days>—</span>
+        <span class="stat-label">days of us</span>
+      </div>
+      <button type="button" class="btn-magic" id="btnConfetti" aria-label="Surprise">Tap for magic</button>
+    </div>
+    <a class="scroll-hint" href="#timeline">Our timeline ↓</a>
+  </header>
+
+  <nav class="dock" aria-label="Sections">
+    <a href="#timeline">Timeline</a>
+    <a href="#memories">Memories</a>
+    <a href="#surprises">Surprises</a>
+    <a href="#letter">Letter</a>
+  </nav>
+
+  <main>
+    <section class="section timeline-section" id="timeline">
+      <div class="section-head">
+        <h2>Our timeline</h2>
+        <p>Every chapter with you feels like the best one.</p>
+      </div>
+      <div class="timeline" id="timelineRoot"></div>
+    </section>
+
+    <section class="section memories-section" id="memories">
+      <div class="section-head">
+        <h2>Little memories</h2>
+        <p>Click a card — I saved something soft inside each one.</p>
+      </div>
+      <div class="memory-grid" id="memoryGrid"></div>
+    </section>
+
+    <section class="section surprises-section" id="surprises">
+      <div class="section-head">
+        <h2>Surprise corner</h2>
+        <p>Try everything. Nothing here is boring on purpose.</p>
+      </div>
+      <div class="surprise-grid">
+        <div class="surprise-box" data-surprise="hearts">
+          <span class="box-icon">💗</span>
+          <h3>Heart shower</h3>
+          <p>Click the button inside.</p>
+          <button type="button" class="btn-surprise">Make it rain</button>
+        </div>
+        <div class="surprise-box" data-surprise="sparkle">
+          <span class="box-icon">✨</span>
+          <h3>Sparkle mode</h3>
+          <p>Move your cursor around this box.</p>
+          <div class="sparkle-zone" id="sparkleZone"></div>
+        </div>
+        <div class="surprise-box" data-surprise="secret">
+          <span class="box-icon">🔐</span>
+          <h3>Secret phrase</h3>
+          <p>Type your nickname anywhere on the page… slowly.</p>
+          <code class="hint-code">j a a n</code>
+        </div>
+        <div class="surprise-box" data-surprise="gift">
+          <span class="box-icon">🎁</span>
+          <h3>Mystery gift</h3>
+          <p>Three taps unlocks it.</p>
+          <button type="button" class="btn-gift" id="giftBtn">Tap me (0/3)</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section letter-section" id="letter">
+      <div class="envelope-wrap">
+        <button type="button" class="envelope" id="envelopeBtn" aria-expanded="false">
+          <span class="envelope-flap"></span>
+          <span class="envelope-body">
+            <span class="seal">J</span>
+          </span>
+        </button>
+        <p class="envelope-hint">Open the envelope, Jaan</p>
+      </div>
+      <div class="letter-panel" id="letterPanel" hidden>
+        <div class="letter-paper">
+          <p class="letter-dear">Dear Jaan,</p>
+          <p id="letterBody"></p>
+          <p class="letter-sign">Forever yours,</p>
+          <p class="letter-name">— with all my heart</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love · For Jaan only · <a href="#top">Back to top</a></p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
